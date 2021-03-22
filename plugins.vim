@@ -8,7 +8,7 @@ Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 "
 " Stable version of coc
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Airlne and Airline Themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -27,7 +27,13 @@ Plug 'nvim-lua/popup.nvim'
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'airblade/vim-rooter' 
+Plug 'airblade/vim-rooter'
+
+" Git
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+
+Plug 'tomasiser/vim-code-dark'
 
 call plug#end()
 
