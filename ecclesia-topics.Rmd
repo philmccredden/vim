@@ -1,0 +1,73 @@
+----
+params:
+# logo: adapte-logo.png
+  logo: ecclesia-logo.jpg
+#  maintitle: ""
+#  secondtitle: ""
+#  client: ""
+#  reportdate: ""
+
+header-includes:
+  - \newcommand{\logo}{`r gsub("_", "\\_", params$logo)`}
+
+output: 
+  pdf_document:
+    extra_dependencies: ["fancyhdr","graphicx","geometry"]
+    latex_engine: xelatex
+documentclass: article
+fontsize: 12pt
+papersize: a4
+geometry: margin=2.5cm
+mainfont: Lato
+---
+
+```{r, include=FALSE}
+# copy the logo file to the current directory
+file.copy("~/Dropbox/common/ecclesia-logo.jpg",getwd())
+```
+
+```{=latex}
+\newcommand\question[2]{\vspace{.08in}\large\textbf{#1. #2}\vspace{.5em}\vspace{.08in}\newline\normalsize}
+\renewcommand\part[1]{\vspace{.10in}\textbf{(#1)}\normalsize}
+\newcommand\answer{\vspace{.5cm}\hrule}
+```
+
+\pagestyle{fancy}
+\fancyfoot[L]{\includegraphics[width = 0.2\textwidth]{\logo}}
+
+
+
+\section*{Ecclesia Leadership Services}
+\addcontentsline{toc}{subsection}{Ecclesia Leadership Services}
+\subsection*{Ecclesia Leadership Courses}
+
+\begin{enumerate}
+  \item Resolving Issues with Others
+  \item Improving your Team Effectiveness
+  \item Introduction to the Enneagram
+  \item Utilising the Enneagram for your Team
+  \item Exploring your Team Dynamics through the Myers Briggs Personality Profile
+  \item Assessing, Framing and Creating Leadership Structures
+  \item Creating Team Measurable Goals
+  \item Utilising your ipad Effectively
+  \item Getting Things Done Introduction
+  \item Understanding Governance
+  \item Discovering our New Missional Context
+  \item Assessing your Organisational Culture
+\end{enumerate}
+
+\subsection*{Other Ecclesia Leadership Services}
+
+\begin{enumerate}
+  \item 360 Degree Interview Based Review Process
+  \item Strategic Leadership Coaching
+  \item Leadership Practice Inventory (LPI) Assessments
+  \item Enneagram Personality Profile
+  \item GTD Personal Productivity Set-up
+  \item Setting up your Personal Technology for Productivity
+  \item Utilising the Business Model Canvas (BMC)
+  \item Creating a New Culture for your Organisation
+    \item Strategic Consulting Services
+\end{enumerate}
+
+
